@@ -1,13 +1,11 @@
 from fastapi import FastAPI
 
+from backend.app.api.health import router as health_router
+
 app = FastAPI(
     title="Nexora API",
     description="Business Intelligence & Analytics Engine",
     version="1.0.0"
 )
 
-
-@app.get("/health")
-def health_check():
-    """Health check endpoint to verify that the Nexora backend server is running."""
-    return {"status": "ok"}
+app.include_router(health_router)
