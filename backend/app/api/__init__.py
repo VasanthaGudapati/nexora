@@ -1,1 +1,2 @@
 # Nexora API Routers Package
+# This package contains the routers for the Nexora API. Each router is responsible for handling requests related to a specific resource or functionality of the API. The routers are organized into separate modules for better maintainability and scalability.
