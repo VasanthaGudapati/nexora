@@ -9,7 +9,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-#FastAPI application instance
+
 
 app.include_router(health_router)
 app.include_router(customer_router)
