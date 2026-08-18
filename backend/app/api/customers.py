@@ -7,7 +7,7 @@ router = APIRouter(prefix="/api/v1", tags=["Customers"])
 # In-memory customer storage
 customers_db: list[dict] = []
 
-# In a real application, you would typically use a database to store customer data. For this example, we are using an in-memory list to keep things simple.
+
 @router.post("/customers", response_model=CustomerResponse, status_code=status.HTTP_201_CREATED)
 def create_customer(customer: CustomerCreate):
     """Create a new customer and store it in memory."""
